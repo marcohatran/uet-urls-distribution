@@ -12,6 +12,6 @@ def get_url_from_sitemap(url_sub_sitemap):
         children = sitemap.getchildren()
         xmlDict[children[0].text] = children[1].text
         link = children[0].text
-        print(link)
+        # print(link)
         urls_tvpl.append(link)
     return urls_tvpl

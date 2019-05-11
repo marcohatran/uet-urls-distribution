@@ -1,0 +1,14 @@
+# postgres/nopassword
+version: '3.1'
+
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: UETDistribute!@#2019
+    volumes:
+      - /home/tuantmtb/Documents/data/uet-distribute-url/database/postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+#    container_name: uet_distribute_postgres
+    restart: 'no'

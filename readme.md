@@ -31,6 +31,12 @@ python init.py
 # Run crawl url news
 python collection_url/collect_news.py
 
+python worker/update_urls_service.py 
+python worker/select_urls.py
+python worker/crawler.py
+
+
+
 ```
 
 #### Development
