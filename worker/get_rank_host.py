@@ -1,4 +1,5 @@
 import logging
+import random
 
 from state.postgres_state import PostgresState
 from helper.postgres_helper import execute, execute_without_response
@@ -33,7 +34,8 @@ def find_host(host):
 
 
 def calculate_host_piority(host):
-    return 3
+    return random.uniform(2, 4.5)
+
 
 
 def get_host_status(host):

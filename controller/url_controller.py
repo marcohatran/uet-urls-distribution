@@ -22,8 +22,8 @@ def find_url(url):
 def create_new_url(url_obj):
     if find_url(url_obj['url']) is None:
         query_insert = f"""
-         INSERT INTO url (host, url, status, piority) VALUES (
-         '{url_obj['host']}', '{url_obj['url']}', '{url_obj['status']}', '{url_obj['piority']}'
+         INSERT INTO url (host, url, status, piority, rank) VALUES (
+         '{url_obj['host']}', '{url_obj['url']}', '{url_obj['status']}', '{url_obj['piority']}', '{url_obj['rank']}'
          );
         """
         connection = PostgresState.get_connection()

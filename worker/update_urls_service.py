@@ -1,5 +1,6 @@
 import json
 import logging
+import random
 import time
 
 from urllib.parse import urlparse
@@ -20,6 +21,10 @@ def get_urls():
     return urls
 
 
+def calculate_url_piority(url):
+    return random.uniform(2, 4.5)
+
+
 if __name__ == '__main__':
 
     urls = get_urls()
@@ -29,8 +34,9 @@ if __name__ == '__main__':
         now = datetime.now()
         timestamp = int(datetime.timestamp(now))
         host_obj = get_host_status(host)
+
         create_new_url(
             {'url': url, 'host': host_obj['host'], 'piority': host_obj['piority'], 'status': 'added_queue_1',
-             'status_id': 1})
+             'status_id': 1, 'rank': calculate_url_piority(url)})
 
         time.sleep(5)

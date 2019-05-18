@@ -5,4 +5,5 @@ def update_host_piority():
     hosts_obj = find_hosts()
     print(hosts_obj)
 
+
 update_host_piority()
